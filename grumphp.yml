@@ -2,7 +2,15 @@ grumphp:
   tasks:
     phpcs:
       standard: PSR12
-    phpstan:
-      level: 5
+      tab_width: 4
+      report: full
+      whitelist_patterns: [ '/^src\/(.*)/' ]
+      ignore_patterns: [ ]
+      sniffs: [ ]
+      triggered_by: [ php ]
+      exclude: [ ]
     phpunit:
+      config_file: phpunit.xml
+      testsuite: "Laracomm Unit Tests"
+      group: [ ]
       always_execute: true
